@@ -11,6 +11,6 @@ public abstract class Command {
 	}
 	
 	
-	public abstract void call();
+	public abstract void call(String line);
 	
 }

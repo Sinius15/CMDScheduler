@@ -9,7 +9,7 @@ public class CmdCommand extends Command{
 	}
 
 	@Override
-	public void call() {
+	public void call(String line) {
 		
 	}
 	
