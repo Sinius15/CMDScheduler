@@ -59,11 +59,11 @@ public class GitFrame extends JFrame{
 		console.replaceSelection(msg);
 	}
 	
-	public void log(String msg) {
+	public static void log(String msg) {
 		appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.black);
 	}
 	
-	public void errLog(String msg) {
+	public static void errLog(String msg) {
 		appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.red);
 	}
 	
