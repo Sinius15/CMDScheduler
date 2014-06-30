@@ -10,7 +10,7 @@ public class SleepCommand extends Command{
 
 	@Override
 	public void call(String line) {
-		
+		System.out.println("SLEEP!");
 	}
 	
 }
