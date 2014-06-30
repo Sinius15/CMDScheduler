@@ -2,7 +2,7 @@ package com.sinius15.cmdRep.pattern;
 
 import com.sinius15.cmdRep.Pattern;
 
-public class datePattern extends Pattern{
+public class DatePattern extends Pattern{
 
 	@Override
 	public String getName() {
