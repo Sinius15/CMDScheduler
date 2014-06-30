@@ -14,6 +14,7 @@ public class DatePattern extends Pattern{
 
 	@Override
 	public String getName() {
+		System.out.println("name");
 		return "date";
 	}
 	
