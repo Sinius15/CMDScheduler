@@ -19,12 +19,15 @@ import javax.swing.text.StyleContext;
 public class GitFrame extends JFrame{
 
 	private static final long serialVersionUID = 1L;
+	private static GitFrame thisFrame;
 	
 	private JTextArea txtArea;
 	private JTextPane console;
 	private JToggleButton startStopBtn;
 	
 	public GitFrame(){
+		thisFrame = this;
+		
 		setTitle("Git Scheduler");
 		setVisible(true);
 		setBounds(0, 0, 574, 555);
@@ -65,6 +68,10 @@ public class GitFrame extends JFrame{
 	
 	public static void errLog(String msg) {
 		appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.red);
+	}
+	
+	public static GitFrame getFrame(){
+		return thisFrame;
 	}
 	
 }

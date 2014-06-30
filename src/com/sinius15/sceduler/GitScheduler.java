@@ -29,13 +29,7 @@ public class GitScheduler  implements ActionListener, Runnable {
 		
 	}
 	
-	public void log(String msg) {
-		appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.black);
-	}
-	
-	public void errLog(String msg) {
-		appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.red);
-	}
+
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
