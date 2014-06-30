@@ -18,10 +18,10 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyleContext;
 
-public class GitFrame extends JFrame  implements ActionListener{
+public class CMDRepFrame extends JFrame  implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
-	private static GitFrame thisFrame;
+	private static CMDRepFrame thisFrame;
 	public static boolean isRunning;
 	
 	private JTextArea txtArea;
@@ -30,7 +30,7 @@ public class GitFrame extends JFrame  implements ActionListener{
 	
 	private Thread runner = null;
 	
-	public GitFrame(){
+	public CMDRepFrame(){
 		thisFrame = this;
 		
 		setTitle("Git Scheduler");
@@ -75,7 +75,7 @@ public class GitFrame extends JFrame  implements ActionListener{
 		getFrame().appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.red);
 	}
 	
-	public static GitFrame getFrame(){
+	public static CMDRepFrame getFrame(){
 		return thisFrame;
 	}
 	

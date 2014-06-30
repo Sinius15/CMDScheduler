@@ -19,31 +19,31 @@ public class Executer implements Runnable{
 	
 	@Override
 	public void run() {
-		GitFrame.log("initializing...");
+		CMDRepFrame.log("initializing...");
 		String[] lines = inputText.split("\\n");
 		if (lines.length < 1) {
 			return;
 		}
 		
 		int i = 0;
-		while (GitFrame.isRunning) {
+		while (CMDRepFrame.isRunning) {
 			String curLine = lines[i];
-			GitFrame.log("now handeling '" + curLine + "'"); 
+			CMDRepFrame.log("now handeling '" + curLine + "'"); 
 			if (curLine.toLowerCase().startsWith("sleep")) {   // sleep!!!
 				curLine = curLine.replace("sleep", "").trim();
 				int sleepTime;
 				try {
 					sleepTime = Integer.parseInt(curLine);
 				} catch (NumberFormatException e) {
-					GitFrame.errLog("Fatal Error!!");
-					JOptionPane.showMessageDialog(GitFrame.getFrame(),
+					CMDRepFrame.errLog("Fatal Error!!");
+					JOptionPane.showMessageDialog(CMDRepFrame.getFrame(),
 							"Invalid argument." + System.lineSeparator()
 									+ "After 'sleep ' there must be a number!", "Fatal Error",
 							JOptionPane.ERROR_MESSAGE);
 					break;
 				}
 				try {
-					GitFrame.log("Sleeping for " + sleepTime + "ms");
+					CMDRepFrame.log("Sleeping for " + sleepTime + "ms");
 					Thread.sleep(sleepTime);
 				} catch (InterruptedException e) {}
 			} else if (curLine.toLowerCase().startsWith("cmd")) { // cmd!!!
@@ -60,7 +60,7 @@ public class Executer implements Runnable{
 					BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream(), "UTF-8"));
 					String line;
 					while ((line = r.readLine()) != null) {
-						GitFrame.errLog(line);
+						CMDRepFrame.errLog(line);
 					}
 					r.close();
 				} catch (IOException e) {
