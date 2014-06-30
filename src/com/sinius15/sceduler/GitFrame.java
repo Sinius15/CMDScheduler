@@ -12,6 +12,8 @@ public class GitFrame extends Frame{
 	private JTextArea txtArea;
 	private JToggleButton startStopBtn;
 	
-	public GitFrame
+	public GitFrame(){
+		
+	}
 	
 }
