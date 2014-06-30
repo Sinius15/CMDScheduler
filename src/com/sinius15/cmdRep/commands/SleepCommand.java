@@ -4,9 +4,10 @@ import com.sinius15.cmdRep.Command;
 
 public class SleepCommand extends Command{
 
-	@Override
-	public String getName() {
-		return "sleep";
+	
+
+	public SleepCommand() {
+		super(name);
 	}
 
 	@Override
