@@ -1,5 +1,17 @@
 package com.sinius15.cmdRep.pattern;
 
-public class datePattern {
+import com.sinius15.cmdRep.Pattern;
+
+public class datePattern extends Pattern{
+
+	@Override
+	public String getName() {
+		return null;
+	}
+
+	@Override
+	public String replace() {
+		return null;
+	}
 	
 }
