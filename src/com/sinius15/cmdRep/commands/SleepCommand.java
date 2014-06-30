@@ -13,7 +13,7 @@ public class SleepCommand extends Command{
 	}
 
 	@Override
-	public void call(String line) {
+	public boolean call(String line) {
 		line = line.replace("sleep", "").trim();
 		int sleepTime = 0;
 		try {
@@ -25,12 +25,13 @@ public class SleepCommand extends Command{
 					"Invalid argument." + System.lineSeparator()
 							+ "After 'sleep ' there must be a number!", "Fatal Error",
 					JOptionPane.ERROR_MESSAGE);
-			break;
+			return false;
 		}
 		try {
 			CMDRepFrame.log("Sleeping for " + sleepTime + "ms");
 			Thread.sleep(sleepTime);
 		} catch (InterruptedException e) {}
+		return true;
 	}
 	
 }
