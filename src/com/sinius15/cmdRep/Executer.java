@@ -1,4 +1,4 @@
-package com.sinius15.sceduler;
+package com.sinius15.cmdRep;
 
 import java.io.BufferedReader;
 import java.io.File;

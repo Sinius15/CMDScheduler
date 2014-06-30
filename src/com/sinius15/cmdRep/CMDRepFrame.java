@@ -1,4 +1,4 @@
-package com.sinius15.sceduler;
+package com.sinius15.cmdRep;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

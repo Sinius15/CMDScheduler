@@ -1,4 +1,4 @@
-package com.sinius15.sceduler;
+package com.sinius15.cmdRep;
 
 public class CMDRep{
 	
