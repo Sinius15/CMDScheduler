@@ -1,6 +1,7 @@
 package com.sinius15.sceduler;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -8,6 +9,10 @@ import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.JToggleButton;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyleContext;
 
 public class GitFrame extends JFrame{
 
@@ -39,6 +44,17 @@ public class GitFrame extends JFrame{
 		scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 		
 		getContentPane().add(scroller, BorderLayout.CENTER);
+	}
+	
+	private void appendToPane(String msg, Color c) {
+		msg += System.lineSeparator();
+		StyleContext sc = StyleContext.getDefaultStyleContext();
+		AttributeSet aset = sc.addAttribute(SimpleAttributeSet.EMPTY, StyleConstants.Foreground, c);
+		
+		int len = console.getDocument().getLength();
+		console.setCaretPosition(len);
+		console.setCharacterAttributes(aset, false);
+		console.replaceSelection(msg);
 	}
 	
 }
