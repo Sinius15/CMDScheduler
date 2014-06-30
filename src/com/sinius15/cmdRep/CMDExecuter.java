@@ -36,7 +36,7 @@ public class CMDExecuter implements Runnable{
 					sleepTime = Integer.parseInt(curLine);
 				} catch (NumberFormatException e) {
 					CMDRepFrame.errLog("Fatal Error!!");
-					JOptionPane.showMessageDialog(CMDRepFrame.getFrame(),
+					JOptionPane.showMessageDialog(CMDRep.repFrame,
 							"Invalid argument." + System.lineSeparator()
 									+ "After 'sleep ' there must be a number!", "Fatal Error",
 							JOptionPane.ERROR_MESSAGE);
