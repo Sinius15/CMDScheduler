@@ -27,7 +27,7 @@ public class CMDExecuter implements Runnable{
 		
 		int i = 0;
 		while (CMDRepFrame.isRunning) {
-			String curLine = lines[i];
+			String curLine = lines[i] + " ";
 			
 			String commandName = curLine.split(" ")[0];
 			
