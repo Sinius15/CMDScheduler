@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class Pattern {
 	
-	public ArrayList<Pattern> patterns = new ArrayList<Pattern>();
+	public static ArrayList<Pattern> patterns = new ArrayList<Pattern>();
 	
 	public Pattern(String name){
 		patterns.add(this);
