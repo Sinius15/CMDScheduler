@@ -11,33 +11,39 @@ import javax.swing.JOptionPane;
 
 public class Executer implements Runnable{
 
+	private String inputText;
+	
+	public Executer(String inputText){
+		this.inputText = inputText;
+	}
+	
 	@Override
 	public void run() {
-		log("initializing...");
-		String[] lines = txtArea.getText().split("\\n");
+		GitFrame.log("initializing...");
+		String[] lines = GitFrame.getFrame().txtArea.getText().split("\\n");
 		if (lines.length < 1) {
 			return;
 		}
 		
 		int i = 0;
-		while (isRunning) {
+		while (GitFrame.isRunning) {
 			String curLine = lines[i];
-			log("now handeling '" + curLine + "'"); 
+			GitFrame.log("now handeling '" + curLine + "'"); 
 			if (curLine.toLowerCase().startsWith("sleep")) {   // sleep!!!
 				curLine = curLine.replace("sleep", "").trim();
 				int sleepTime;
 				try {
 					sleepTime = Integer.parseInt(curLine);
 				} catch (NumberFormatException e) {
-					errLog("Fatal Error!!");
-					JOptionPane.showMessageDialog(this,
+					GitFrame.errLog("Fatal Error!!");
+					JOptionPane.showMessageDialog(GitFrame.getFrame(),
 							"Invalid argument." + System.lineSeparator()
 									+ "After 'sleep ' there must be a number!", "Fatal Error",
 							JOptionPane.ERROR_MESSAGE);
 					break;
 				}
 				try {
-					log("Sleeping for " + sleepTime + "ms");
+					GitFrame.log("Sleeping for " + sleepTime + "ms");
 					Thread.sleep(sleepTime);
 				} catch (InterruptedException e) {}
 			} else if (curLine.toLowerCase().startsWith("cmd")) { // cmd!!!
