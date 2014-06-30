@@ -28,6 +28,8 @@ public class GitFrame extends JFrame  implements ActionListener{
 	private JTextPane console;
 	private JToggleButton startStopBtn;
 	
+	private Thread runner = null;
+	
 	public GitFrame(){
 		thisFrame = this;
 		
