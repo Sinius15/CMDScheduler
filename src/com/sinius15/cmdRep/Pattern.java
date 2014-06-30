@@ -1,5 +1,5 @@
 package com.sinius15.cmdRep;
 
-public class Pattern {
+public abstract class Pattern {
 	
 }
