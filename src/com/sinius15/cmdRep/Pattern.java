@@ -4,6 +4,6 @@ public abstract class Pattern {
 	
 	public abstract String getName();
 	
-	public abstract String replace(String s);
+	public abstract String replace();
 	
 }
