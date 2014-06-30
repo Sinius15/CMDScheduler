@@ -1,6 +1,5 @@
 package com.sinius15.sceduler;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +10,6 @@ import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
@@ -20,10 +18,8 @@ import javax.swing.text.AttributeSet;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyleContext;
-import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
 
-public class GitScheduler extends JFrame implements ActionListener, Runnable {
+public class GitScheduler  implements ActionListener, Runnable {
 	
 	private static final long serialVersionUID = 7168564315189023406L;
 	private JTextArea txtArea;
