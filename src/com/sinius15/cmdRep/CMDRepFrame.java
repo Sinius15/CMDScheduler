@@ -85,7 +85,7 @@ public class CMDRepFrame extends JFrame  implements ActionListener{
 			// start running
 			isRunning = true;
 			txtArea.setEditable(false);
-			runner = new Thread(new Executer(txtArea.getText()));
+			runner = new Thread(new CMDExecuter(txtArea.getText()));
 			runner.start();
 			
 			startStopBtn.setText("Stop Excecuting");

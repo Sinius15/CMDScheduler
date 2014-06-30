@@ -9,11 +9,11 @@ import java.util.Date;
 
 import javax.swing.JOptionPane;
 
-public class Executer implements Runnable{
+public class CMDExecuter implements Runnable{
 
 	private String inputText;
 	
-	public Executer(String inputText){
+	public CMDExecuter(String inputText){
 		this.inputText = inputText;
 	}
 	
