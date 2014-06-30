@@ -2,6 +2,8 @@ package com.sinius15.sceduler;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -55,6 +57,14 @@ public class GitFrame extends JFrame{
 		console.setCaretPosition(len);
 		console.setCharacterAttributes(aset, false);
 		console.replaceSelection(msg);
+	}
+	
+	public void log(String msg) {
+		appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.black);
+	}
+	
+	public void errLog(String msg) {
+		appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.red);
 	}
 	
 }
