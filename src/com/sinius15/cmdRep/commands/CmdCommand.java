@@ -1,5 +1,5 @@
 package com.sinius15.cmdRep.commands;
 
-public class cmd {
+public class CmdCommand {
 	
 }
