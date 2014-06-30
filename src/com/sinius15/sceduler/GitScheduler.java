@@ -27,27 +27,7 @@ public class GitScheduler implements ActionListener, Runnable {
 		
 	}
 	
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (startStopBtn.isSelected()) {
-			// start running
-			isRunning = true;
-			txtArea.setEditable(false);
-			runner = new Thread(this);
-			runner.start();
-			
-			startStopBtn.setText("Stop Excecuting");
-		} else {
-			// stop running
-			isRunning = false;
-			if (!runner.isInterrupted())
-				runner.interrupt();
-			runner = null;
-			
-			txtArea.setEditable(true);
-			startStopBtn.setText("Start Excecuting");
-		}
-	}
+
 	
 	
 	

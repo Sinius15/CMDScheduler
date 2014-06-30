@@ -2,6 +2,7 @@ package com.sinius15.sceduler;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -16,7 +17,7 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyleContext;
 
-public class GitFrame extends JFrame{
+public class GitFrame extends JFrame  implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
 	private static GitFrame thisFrame;
