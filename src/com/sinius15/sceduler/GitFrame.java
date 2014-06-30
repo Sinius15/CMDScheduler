@@ -2,6 +2,7 @@ package com.sinius15.sceduler;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -76,4 +77,25 @@ public class GitFrame extends JFrame  implements ActionListener{
 		return thisFrame;
 	}
 	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (startStopBtn.isSelected()) {
+			// start running
+			isRunning = true;
+			txtArea.setEditable(false);
+			runner = new Thread(this);
+			runner.start();
+			
+			startStopBtn.setText("Stop Excecuting");
+		} else {
+			// stop running
+			isRunning = false;
+			if (!runner.isInterrupted())
+				runner.interrupt();
+			runner = null;
+			
+			txtArea.setEditable(true);
+			startStopBtn.setText("Start Excecuting");
+		}
+	}
 }
