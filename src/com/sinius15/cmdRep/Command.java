@@ -6,11 +6,10 @@ public abstract class Command {
 	
 	public static HashMap<String, Command> commands = new HashMap<>();
 	
-	public Command(){
-		commands.put(getName(), this);
+	public Command(String name){
+		commands.put(name, this);
 	}
 	
-	public abstract String getName();
 	
 	public abstract void call();
 	
