@@ -34,28 +34,7 @@ public class GitScheduler extends JFrame implements ActionListener, Runnable {
 	private JTextPane console;
 	
 	public GitScheduler() {
-		setTitle("Git Scheduler");
-		setVisible(true);
-		setBounds(0, 0, 574, 555);
-		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		startStopBtn = new JToggleButton("Start Excecuting");
-		startStopBtn.addActionListener(this);
-		getContentPane().add(startStopBtn, BorderLayout.SOUTH);
-		
-		txtArea = new JTextArea();
-		txtArea.setText("cmd git add -A \ncmd git commit -m \" auto commit on %date - %time\" \nsleep 1000");
-		getContentPane().add(txtArea, BorderLayout.NORTH);
-		
-		console = new JTextPane();
-		console.setEditable(true);
-		JScrollPane scroller = new JScrollPane(console);
-		scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-		
-		getContentPane().add(scroller, BorderLayout.CENTER);
-		
+
 		
 	}
 	
