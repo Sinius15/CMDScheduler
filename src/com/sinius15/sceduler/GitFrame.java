@@ -1,7 +1,6 @@
 package com.sinius15.sceduler;
 
 import java.awt.BorderLayout;
-import java.awt.Frame;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -10,7 +9,7 @@ import javax.swing.JTextPane;
 import javax.swing.JToggleButton;
 import javax.swing.ScrollPaneConstants;
 
-public class GitFrame extends Frame{
+public class GitFrame extends JFrame{
 
 	private static final long serialVersionUID = 1L;
 	
