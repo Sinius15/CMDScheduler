@@ -14,6 +14,7 @@ public class GitFrame extends JFrame{
 	private static final long serialVersionUID = 1L;
 	
 	private JTextArea txtArea;
+	private JTextPane console;
 	private JToggleButton startStopBtn;
 	
 	public GitFrame(){
