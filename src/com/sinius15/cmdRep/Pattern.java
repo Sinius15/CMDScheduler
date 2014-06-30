@@ -1,14 +1,17 @@
 package com.sinius15.cmdRep;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public abstract class Pattern {
 	
-	public HashMap<String, Pattern> patterns = new HashMap<>();
+	public ArrayList<Pattern> patterns = new ArrayList();
 	
 	public Pattern(String name){
-		patterns.put(name, this);
+		patterns.add(this);
 	}
+	
+	public abstract String getName();
 	
 	public abstract String replace();
 	
