@@ -29,7 +29,7 @@ public class CMDExecuter implements Runnable{
 			
 			
 			
-			String[] words = curLine.split(" ")[0];
+			String commandName = curLine.split(" ")[0];
 			
 			Command c = Command.commands.get(commandName);
 			if(c.call(curLine) == false)
