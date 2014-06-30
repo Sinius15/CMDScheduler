@@ -4,13 +4,8 @@ import com.sinius15.cmdRep.Pattern;
 
 public class TimePattern extends Pattern{
 
-	public TimePattern(String name) {
-		super(name);
-	}
-
-	@Override
-	public String getName() {
-		return "time";
+	public TimePattern() {
+		super("time");
 	}
 
 	@Override
