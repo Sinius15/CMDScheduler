@@ -23,15 +23,15 @@ public class CmdCommand extends Command{
 		line = line.replace("%date", new SimpleDateFormat("dd.MM.yyy").format(new Date()));
 		
 		
-		ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", curLine);
+		ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", line);
 		builder.directory(new File(System.getProperty("user.dir")));
 		builder.redirectErrorStream(true);
 		try {
 			Process p = builder.start();
 			BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream(), "UTF-8"));
-			String line;
-			while ((line = r.readLine()) != null) {
-				CMDRepFrame.errLog(line);
+			String l;
+			while ((l = r.readLine()) != null) {
+				CMDRepFrame.errLog(l);
 			}
 			r.close();
 		} catch (IOException e) {
