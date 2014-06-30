@@ -10,6 +10,6 @@ public abstract class Command {
 		commands.put(name, this);
 	}
 	
-	public abstract void call(String line);
+	public abstract boolean call(String line);
 	
 }
