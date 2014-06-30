@@ -15,9 +15,10 @@ public class SleepCommand extends Command{
 	@Override
 	public void call(String line) {
 		line = line.replace("sleep", "").trim();
-		int sleepTime;
+		int sleepTime = 0;
 		try {
 			sleepTime = Integer.parseInt(line);
+			
 		} catch (NumberFormatException e) {
 			CMDRepFrame.errLog("Fatal Error!!");
 			JOptionPane.showMessageDialog(CMDRep.repFrame,
