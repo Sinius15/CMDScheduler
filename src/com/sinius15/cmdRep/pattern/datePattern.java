@@ -7,13 +7,14 @@ import com.sinius15.cmdRep.Pattern;
 
 public class DatePattern extends Pattern{
 
-	public DatePattern() {
-		super("date");
-	}
-
 	@Override
 	public String replace() {
 		return new SimpleDateFormat("dd.MM.yyy").format(new Date());
+	}
+
+	@Override
+	public String getName() {
+		return "date";
 	}
 	
 }
