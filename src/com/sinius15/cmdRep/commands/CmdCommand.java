@@ -18,9 +18,9 @@ public class CmdCommand extends Command{
 
 	@Override
 	public boolean call(String line) {
-		curLine = curLine.replace("cmd", "").trim();
-		curLine = curLine.replace("%time", new SimpleDateFormat("HH:mm:ss").format(new Date()));
-		curLine = curLine.replace("%date", new SimpleDateFormat("dd.MM.yyy").format(new Date()));
+		line = line.replace("cmd", "").trim();
+		line = line.replace("%time", new SimpleDateFormat("HH:mm:ss").format(new Date()));
+		line = line.replace("%date", new SimpleDateFormat("dd.MM.yyy").format(new Date()));
 		
 		
 		ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", curLine);
