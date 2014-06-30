@@ -4,9 +4,8 @@ import com.sinius15.cmdRep.Command;
 
 public class CmdCommand extends Command{
 
-	@Override
-	public String getName() {
-		return "cmd";
+	public CmdCommand() {
+		super("cmd");
 	}
 
 	@Override
