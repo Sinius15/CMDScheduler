@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import com.sinius15.cmdRep.CMDRepFrame;
 import com.sinius15.cmdRep.Command;
@@ -19,8 +17,6 @@ public class CmdCommand extends Command{
 	@Override
 	public boolean call(String line) {
 		line = line.replace("cmd", "").trim();
-		line = line.replace("%time", );
-		line = line.replace("%date", );
 		
 		
 		ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", line);
