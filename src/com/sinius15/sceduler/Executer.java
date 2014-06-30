@@ -20,7 +20,7 @@ public class Executer implements Runnable{
 	@Override
 	public void run() {
 		GitFrame.log("initializing...");
-		String[] lines = in.split("\\n");
+		String[] lines = inputText.split("\\n");
 		if (lines.length < 1) {
 			return;
 		}
@@ -60,7 +60,7 @@ public class Executer implements Runnable{
 					BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream(), "UTF-8"));
 					String line;
 					while ((line = r.readLine()) != null) {
-						errLog(line);
+						GitFrame.errLog(line);
 					}
 					r.close();
 				} catch (IOException e) {
