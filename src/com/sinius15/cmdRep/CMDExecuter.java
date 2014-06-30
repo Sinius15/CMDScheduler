@@ -7,8 +7,6 @@ import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.swing.JOptionPane;
-
 public class CMDExecuter implements Runnable{
 
 	private String inputText;
@@ -32,7 +30,9 @@ public class CMDExecuter implements Runnable{
 			String commandName = curLine.split(" ")[0];
 			
 			Command c = Command.commands.get(commandName);
-			c.call(curLine);
+			if(c.call(curLine) == false)
+				break;  //fatal error;
+			
 			
 			if (curLine.toLowerCase().startsWith("sleep")) {   // sleep!!!
 				
