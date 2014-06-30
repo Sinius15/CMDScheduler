@@ -6,7 +6,7 @@ public class SleepCommand extends Command{
 
 	@Override
 	public String getName() {
-		return null;
+		return "sleep";
 	}
 
 	@Override

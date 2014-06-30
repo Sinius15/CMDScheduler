@@ -6,7 +6,7 @@ public class CmdCommand extends Command{
 
 	@Override
 	public String getName() {
-		return null;
+		return "cmd";
 	}
 
 	@Override
