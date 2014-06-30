@@ -85,7 +85,7 @@ public class GitFrame extends JFrame  implements ActionListener{
 			// start running
 			isRunning = true;
 			txtArea.setEditable(false);
-			runner = new Thread(this);
+			runner = new Thread(new Executer(txtArea.getText()));
 			runner.start();
 			
 			startStopBtn.setText("Stop Excecuting");
