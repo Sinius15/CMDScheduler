@@ -31,6 +31,9 @@ public class CMDExecuter implements Runnable{
 			
 			String commandName = curLine.split(" ")[0];
 			
+			Command c = Command.commands.get(commandName);
+			c.call(curLine);
+			
 			if (curLine.toLowerCase().startsWith("sleep")) {   // sleep!!!
 				curLine = curLine.replace("sleep", "").trim();
 				int sleepTime;
