@@ -6,7 +6,7 @@ public abstract class Pattern {
 	
 	public static ArrayList<Pattern> patterns = new ArrayList<Pattern>();
 	
-	public Pattern(String name){
+	public Pattern(){
 		patterns.add(this);
 	}
 	
