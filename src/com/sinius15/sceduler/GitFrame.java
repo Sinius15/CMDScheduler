@@ -63,11 +63,11 @@ public class GitFrame extends JFrame{
 	}
 	
 	public static void log(String msg) {
-		appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.black);
+		getFrame().appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.black);
 	}
 	
 	public static void errLog(String msg) {
-		appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.red);
+		getFrame().appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.red);
 	}
 	
 	public static GitFrame getFrame(){
