@@ -28,7 +28,9 @@ public class CMDExecuter implements Runnable{
 		int i = 0;
 		while (CMDRepFrame.isRunning) {
 			String curLine = lines[i];
-			CMDRepFrame.log("now handeling '" + curLine + "'"); 
+			
+			String commandName = curLine.split(" ")[0];
+			
 			if (curLine.toLowerCase().startsWith("sleep")) {   // sleep!!!
 				curLine = curLine.replace("sleep", "").trim();
 				int sleepTime;
