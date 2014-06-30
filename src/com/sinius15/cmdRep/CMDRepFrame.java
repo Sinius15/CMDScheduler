@@ -30,7 +30,6 @@ public class CMDRepFrame extends JFrame  implements ActionListener{
 	private Thread runner = null;
 	
 	public CMDRepFrame(){
-		thisFrame = this;
 		
 		setTitle("Git Scheduler");
 		setVisible(true);
@@ -72,10 +71,6 @@ public class CMDRepFrame extends JFrame  implements ActionListener{
 	
 	public static void errLog(String msg) {
 		getFrame().appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.red);
-	}
-	
-	public static CMDRepFrame getFrame(){
-		return thisFrame;
 	}
 	
 	@Override
