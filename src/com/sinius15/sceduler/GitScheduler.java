@@ -15,21 +15,18 @@ import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.JToggleButton;
 
-public class GitScheduler  implements ActionListener, Runnable {
+public class GitScheduler implements ActionListener, Runnable {
 	
 	private JTextArea txtArea;
 	private JToggleButton startStopBtn;
 	
 	private Thread runner;
 	private boolean isRunning;
-	private JTextPane console;
 	
 	public GitScheduler() {
 
 		
 	}
-	
-
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
