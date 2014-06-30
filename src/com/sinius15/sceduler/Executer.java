@@ -20,7 +20,7 @@ public class Executer implements Runnable{
 	@Override
 	public void run() {
 		GitFrame.log("initializing...");
-		String[] lines = GitFrame.getFrame().txtArea.getText().split("\\n");
+		String[] lines = in.split("\\n");
 		if (lines.length < 1) {
 			return;
 		}
