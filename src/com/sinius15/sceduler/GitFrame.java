@@ -20,6 +20,7 @@ public class GitFrame extends JFrame{
 
 	private static final long serialVersionUID = 1L;
 	private static GitFrame thisFrame;
+	public static boolean isRunning;
 	
 	private JTextArea txtArea;
 	private JTextPane console;
