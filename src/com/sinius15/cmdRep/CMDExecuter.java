@@ -35,22 +35,7 @@ public class CMDExecuter implements Runnable{
 			c.call(curLine);
 			
 			if (curLine.toLowerCase().startsWith("sleep")) {   // sleep!!!
-				curLine = curLine.replace("sleep", "").trim();
-				int sleepTime;
-				try {
-					sleepTime = Integer.parseInt(curLine);
-				} catch (NumberFormatException e) {
-					CMDRepFrame.errLog("Fatal Error!!");
-					JOptionPane.showMessageDialog(CMDRep.repFrame,
-							"Invalid argument." + System.lineSeparator()
-									+ "After 'sleep ' there must be a number!", "Fatal Error",
-							JOptionPane.ERROR_MESSAGE);
-					break;
-				}
-				try {
-					CMDRepFrame.log("Sleeping for " + sleepTime + "ms");
-					Thread.sleep(sleepTime);
-				} catch (InterruptedException e) {}
+				
 			} else if (curLine.toLowerCase().startsWith("cmd")) { // cmd!!!
 				curLine = curLine.replace("cmd", "").trim();
 				curLine = curLine.replace("%time", new SimpleDateFormat("HH:mm:ss").format(new Date()));
