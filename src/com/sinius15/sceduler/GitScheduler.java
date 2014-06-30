@@ -14,14 +14,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.JToggleButton;
-import javax.swing.text.AttributeSet;
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyleContext;
 
 public class GitScheduler  implements ActionListener, Runnable {
 	
-	private static final long serialVersionUID = 7168564315189023406L;
 	private JTextArea txtArea;
 	private JToggleButton startStopBtn;
 	
@@ -32,17 +27,6 @@ public class GitScheduler  implements ActionListener, Runnable {
 	public GitScheduler() {
 
 		
-	}
-	
-	private void appendToPane(String msg, Color c) {
-		msg += System.lineSeparator();
-		StyleContext sc = StyleContext.getDefaultStyleContext();
-		AttributeSet aset = sc.addAttribute(SimpleAttributeSet.EMPTY, StyleConstants.Foreground, c);
-		
-		int len = console.getDocument().getLength();
-		console.setCaretPosition(len);
-		console.setCharacterAttributes(aset, false);
-		console.replaceSelection(msg);
 	}
 	
 	public void log(String msg) {
