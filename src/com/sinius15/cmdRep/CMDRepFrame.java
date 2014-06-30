@@ -21,7 +21,6 @@ import javax.swing.text.StyleContext;
 public class CMDRepFrame extends JFrame  implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
-	private static CMDRepFrame thisFrame;
 	public static boolean isRunning;
 	
 	private JTextArea txtArea;
