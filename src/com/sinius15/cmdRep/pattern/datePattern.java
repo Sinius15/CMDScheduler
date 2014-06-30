@@ -6,7 +6,7 @@ public class DatePattern extends Pattern{
 
 	@Override
 	public String getName() {
-		return null;
+		return "date";
 	}
 
 	@Override

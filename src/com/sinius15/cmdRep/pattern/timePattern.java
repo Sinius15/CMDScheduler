@@ -6,7 +6,7 @@ public class TimePattern extends Pattern{
 
 	@Override
 	public String getName() {
-		return null;
+		return "time";
 	}
 
 	@Override
