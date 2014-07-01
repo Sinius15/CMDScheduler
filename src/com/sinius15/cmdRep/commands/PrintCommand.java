@@ -7,5 +7,10 @@ public class PrintCommand extends Command{
 	public PrintCommand() {
 		super("print");
 	}
+
+	@Override
+	public boolean call(String line) {
+		return true;
+	}
 	
 }
