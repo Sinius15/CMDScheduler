@@ -22,6 +22,10 @@ public class CMDExecuter implements Runnable{
 		while (CMDRepFrame.isRunning) {
 			String curLine = lines[i] + " ";
 			
+			i++;  //add it here so we can continue or break at any time and still have the right counter.
+			if (i == lines.length)
+				i = 0;
+			
 			for(Pattern pat : Pattern.patterns )
 				curLine = curLine.replace("%"+pat.getName(), pat.replace());
 			
@@ -37,9 +41,7 @@ public class CMDExecuter implements Runnable{
 			if(c.call(curLine) == false)
 				break;  //fatal error;
 			
-			i++;
-			if (i == lines.length)
-				i = 0;
+			
 		}
 		
 	}
