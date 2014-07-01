@@ -19,7 +19,7 @@ public class PCNamePattern extends Pattern{
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
-		return "could not find computer name.";
+		return "Could not find computer name.";
 	}
 	
 }
