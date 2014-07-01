@@ -17,4 +17,5 @@ public class DatePattern extends Pattern{
 		return "date";
 	}
 	
+	
 }
