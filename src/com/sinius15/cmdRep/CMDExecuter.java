@@ -1,6 +1,5 @@
 package com.sinius15.cmdRep;
 
-
 public class CMDExecuter implements Runnable{
 
 	private String inputText;
