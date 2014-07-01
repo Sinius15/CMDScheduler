@@ -29,6 +29,7 @@ public class CMDExecuter implements Runnable{
 			
 			Command c = Command.commands.get(commandName);
 			if(commandName.equals(""))
+				continue;
 			if(c == null){
 				JOptionPane.showMessageDialog(CMDRep.repFrame, "No command '" + commandName + "'", "fatal error", JOptionPane.ERROR_MESSAGE);
 				break;
