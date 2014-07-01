@@ -66,11 +66,11 @@ public class CMDRepFrame extends JFrame  implements ActionListener{
 	}
 	
 	public static void log(String msg) {
-		CMDRep.repFrame.appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.black);
+		CMDRep.repFrame.appendToPane(msg, Color.black);
 	}
 	
 	public static void errLog(String msg) {
-		CMDRep.repFrame.appendToPane(new SimpleDateFormat("HH:mm:ss").format(new Date()) + ":  " + msg, Color.red);
+		CMDRep.repFrame.appendToPane(msg, Color.red);
 	}
 	
 	@Override
