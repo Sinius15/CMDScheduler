@@ -28,7 +28,6 @@ public class SleepCommand extends Command{
 			return false;
 		}
 		try {
-			CMDRepFrame.log("Sleeping for " + sleepTime + "ms");
 			Thread.sleep(sleepTime);
 		} catch (InterruptedException e) {}
 		return true;
