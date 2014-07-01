@@ -26,6 +26,8 @@ public class CMDExecuter implements Runnable{
 			String commandName = curLine.split(" ", -1)[0];
 			
 			Command c = Command.commands.get(commandName);
+			if(c == null)
+				break;
 			if(c.call(curLine) == false)
 				break;  //fatal error;
 			
