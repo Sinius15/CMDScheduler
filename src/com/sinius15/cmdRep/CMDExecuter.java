@@ -1,5 +1,7 @@
 package com.sinius15.cmdRep;
 
+import javax.swing.JOptionPane;
+
 public class CMDExecuter implements Runnable{
 
 	private String inputText;
@@ -26,8 +28,10 @@ public class CMDExecuter implements Runnable{
 			String commandName = curLine.split(" ", -1)[0];
 			
 			Command c = Command.commands.get(commandName);
-			if(c == null)
+			if(c == null){
+				JOptionPane.showMessageDialog(CMDRep.repFrame, "No command '" + commandName + "'", "fatal error", JOptionPane.ERROR_MESSAGE);
 				break;
+			}
 			if(c.call(curLine) == false)
 				break;  //fatal error;
 			
