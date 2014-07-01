@@ -23,7 +23,7 @@ public class CMDExecuter implements Runnable{
 			for(Pattern pat : Pattern.patterns )
 				curLine = curLine.replace("%"+pat.getName(), pat.replace());
 			
-			String commandName = curLine.split(" ")[0];
+			String commandName = curLine.split(" ", -1)[0];
 			
 			Command c = Command.commands.get(commandName);
 			if(c.call(curLine) == false)
