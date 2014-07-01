@@ -17,9 +17,9 @@ public class PCNamePattern extends Pattern{
 		try {
 			return InetAddress.getLocalHost().getHostName();
 		} catch (UnknownHostException e) {
-			e.printStackTrace();
+			return "Could not find computer name: " + e.getMessage();
 		}
-		return "Could not find computer name.";
+		
 	}
 	
 }
