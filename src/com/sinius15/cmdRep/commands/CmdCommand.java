@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 
 import com.sinius15.cmdRep.CMDRepFrame;
 import com.sinius15.cmdRep.Command;
@@ -24,6 +25,8 @@ public class CmdCommand extends Command{
 		builder.redirectErrorStream(true);
 		try {
 			Process p = builder.start();
+			PrintStream pr = new PrintStream(p.getOutputStream(), true);
+			pr.println("dir");
 			BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream(), "UTF-8"));
 			String l;
 			while ((l = r.readLine()) != null) {
