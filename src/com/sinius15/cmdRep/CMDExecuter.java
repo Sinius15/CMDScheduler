@@ -25,9 +25,10 @@ public class CMDExecuter implements Runnable{
 			for(Pattern pat : Pattern.patterns )
 				curLine = curLine.replace("%"+pat.getName(), pat.replace());
 			
-			String commandName = curLine.split(" ", -1)[0];
+			String commandName = curLine.split(" ", -1)[0].trim();
 			
 			Command c = Command.commands.get(commandName);
+			if(commandName.equals(""))
 			if(c == null){
 				JOptionPane.showMessageDialog(CMDRep.repFrame, "No command '" + commandName + "'", "fatal error", JOptionPane.ERROR_MESSAGE);
 				break;
