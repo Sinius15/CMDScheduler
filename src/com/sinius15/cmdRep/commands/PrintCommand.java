@@ -1,5 +1,11 @@
 package com.sinius15.cmdRep.commands;
 
-public class PrintCommand {
+import com.sinius15.cmdRep.Command;
+
+public class PrintCommand extends Command{
+
+	public PrintCommand() {
+		super("print");
+	}
 	
 }
