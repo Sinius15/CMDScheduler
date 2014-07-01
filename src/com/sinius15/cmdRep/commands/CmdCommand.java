@@ -27,7 +27,7 @@ public class CmdCommand extends Command{
 			BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream(), "UTF-8"));
 			String l;
 			while ((l = r.readLine()) != null) {
-				CMDRepFrame.errLog(l);
+				CMDRepFrame.errLog("[cmd] " + l);
 			}
 			r.close();
 		} catch (IOException e) {
